@@ -17,6 +17,12 @@ steps:
     cmake -DMQTT_NO_TLS=ON -DMQTT_USE_WS=OFF  -DMQTT_USE_STR_CHECK=OFF   -DMQTT_TEST_1=ON  -DMQTT_TEST_2=OFF -DMQTT_TEST_3=OFF ..
     cmake --build . --config Release
     cd test
+    echo "---"
+    set
+    echo "---"
     set PATH="%BOOST_ROOT%/lib;%PATH%"
+    echo "---"
+    set
+    echo "---"
     ctest -VV
   displayName: 'cmake test'
