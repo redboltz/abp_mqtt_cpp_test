@@ -20,7 +20,7 @@ steps:
     echo "---"
     set
     echo "---"
-    set PATH="%BOOST_ROOT%/lib;%PATH%"
+    set PATH="%BOOST_ROOT%\\lib;%PATH%"
     echo "---"
     set
     echo "---"
