@@ -25,7 +25,7 @@ steps:
     set INCLUDE=D:/a/1/s/openssl/build/tmp/include/openssl/
     set LIB=D:/a/1/s/openssl/build/tmp/lib/
     set PATH=D:/a/1/s/openssl/build/tmp/bin/;%PATH%
-    cmake -DMQTT_NO_TLS=OFF -DMQTT_USE_WS=OFF  -DMQTT_USE_STR_CHECK=OFF   -DMQTT_TEST_1=ON  -DMQTT_TEST_2=OFF -DMQTT_TEST_3=OFF -DBUILD_EXAMPLES=OFF ..
+    cmake -DMQTT_NO_TLS=OFF -DMQTT_USE_WS=OFF  -DMQTT_USE_STR_CHECK=OFF   -DMQTT_TEST_1=ON  -DMQTT_TEST_2=OFF -DMQTT_TEST_3=OFF -DBUILD_EXAMPLES=OFF -DOPENSSL_ROOT_DIR="D:/a/1/s/openssl/build/" -DOPENSSL_LIB_DIR="D:/a/1/s/openssl/build/tmp/lib/" -DMQTT_OPENSSL_INCLUDE_DIR="D:/a/1/s/openssl/build/tmp/include/" ..
     cmake --build . --config Release
     cd test
     echo "---"
