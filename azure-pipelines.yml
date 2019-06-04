@@ -17,7 +17,7 @@ strategy:
       MQTT_TEST_3: OFF
       BUILD_EXAMPLES: OFF       
     TestGroup2TlsWs:
-      MQTT_NO_TLS: OFF
+      MQTT_NO_TLS: ON
       MQTT_USE_WS: ON
       MQTT_USE_STR_CHECK: ON
       MQTT_TEST_1: OFF
@@ -26,7 +26,7 @@ strategy:
       BUILD_EXAMPLES: OFF       
     TestGroup3TlsWs:
       MQTT_NO_TLS: OFF
-      MQTT_USE_WS: ON
+      MQTT_USE_WS: OFF
       MQTT_USE_STR_CHECK: ON
       MQTT_TEST_1: OFF
       MQTT_TEST_2: OFF
