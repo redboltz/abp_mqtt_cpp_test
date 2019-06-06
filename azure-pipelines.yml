@@ -4,16 +4,9 @@
 # https://aka.ms/yaml
 
 trigger:
-  branches:
-    include:
-      - *
-  tags:
-    include:
-      - *
+  - '*'
 pr:
-  branches:
-    include:
-      - *
+  - '*'
       
 
 strategy:
