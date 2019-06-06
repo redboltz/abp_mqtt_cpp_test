@@ -9,7 +9,7 @@ pr:
   - '*'
       
 jobs:
-- job install_openssl
+- job: install_openssl
   pool:
     vmImage: 'vs2017-win2016'
   steps:
@@ -19,7 +19,8 @@ jobs:
       .\curl\projects\build-openssl.bat vc14.1 x86 debug .\openssl\ -perlpath C:\Strawberry
   displayName: 'install openssl'
 
-- job build_mqtt_cpp
+- job: build_mqtt_cpp
+  dependsOn: install_openssl
   pool:
     vmImage: 'vs2017-win2016'
   strategy:
