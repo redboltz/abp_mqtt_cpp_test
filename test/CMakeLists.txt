@@ -9,29 +9,54 @@ CMAKE_MINIMUM_REQUIRED (VERSION 3.8.2)
 OPTION(MQTT_TEST_1 "Build test part1" ON)
 OPTION(MQTT_TEST_2 "Build test part2" ON)
 OPTION(MQTT_TEST_3 "Build test part3" ON)
+OPTION(MQTT_TEST_3 "Build test part4" ON)
+OPTION(MQTT_TEST_3 "Build test part5" ON)
+OPTION(MQTT_TEST_3 "Build test part6" ON)
 
 IF (MQTT_TEST_1)
     LIST (APPEND check_PROGRAMS
         connect.cpp
-        pubsub.cpp
-        async_pubsub_1.cpp
-        async_pubsub_2.cpp
-        pubsub_no_strand.cpp
+    )
+ENDIF ()
+    
+IF (MQTT_TEST_2)
+    LIST (APPEND check_PROGRAMS
+        length_check.cpp
+        utf8string_validate.cpp
+        packet_id.cpp
         remaining_length.cpp
+    )
+ENDIF ()
+
+IF (MQTT_TEST_3)
+    LIST (APPEND check_PROGRAMS
+        pubsub.cpp
+        pubsub_no_strand.cpp
         multi_sub.cpp
     )
 ENDIF ()
 
-IF (MQTT_TEST_2)
+IF (MQTT_TEST_4)
+    LIST (APPEND check_PROGRAMS
+        async_pubsub_1.cpp
+        async_pubsub_2.cpp
+    )
+ENDIF ()
+
+IF (MQTT_TEST_5)
     LIST (APPEND check_PROGRAMS
         resend.cpp
         resend_serialize.cpp
         resend_serialize_ptr_size.cpp
+    )
+ENDIF ()
+
+IF (MQTT_TEST_6)
+    LIST (APPEND check_PROGRAMS
         offline.cpp
         manual_publish.cpp
         retain.cpp
         will.cpp
-        length_check.cpp
     )
 ENDIF ()
 
@@ -42,8 +67,6 @@ IF (MQTT_TEST_3)
         as_buffer_pubsub.cpp
         as_buffer_async_pubsub_1.cpp
         as_buffer_async_pubsub_2.cpp
-        utf8string_validate.cpp
-        packet_id.cpp
     )
 ENDIF ()
 
