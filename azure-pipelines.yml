@@ -24,6 +24,7 @@ strategy:
       MQTT_TEST_6: OFF
       BUILD_EXAMPLES: ON
     TestGroup2:
+      MQTT_NO_TLS: ON
       MQTT_USE_WS: ON
       MQTT_USE_STR_CHECK: ON
       MQTT_TEST_1: OFF
