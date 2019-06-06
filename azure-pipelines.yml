@@ -11,29 +11,71 @@ pr:
 
 strategy:
   matrix:
-    TestGroup1TlsWs:
+    TestGroup1:
       MQTT_NO_TLS: OFF
       MQTT_USE_WS: ON
       MQTT_USE_STR_CHECK: OFF
       MQTT_TEST_1: ON
       MQTT_TEST_2: OFF
       MQTT_TEST_3: OFF
-      BUILD_EXAMPLES: OFF       
-    TestGroup2TlsWs:
+      MQTT_TEST_4: OFF
+      MQTT_TEST_5: OFF
+      MQTT_TEST_6: OFF
+      BUILD_EXAMPLES: ON
+    TestGroup2:
       MQTT_NO_TLS: ON
       MQTT_USE_WS: ON
       MQTT_USE_STR_CHECK: ON
       MQTT_TEST_1: OFF
       MQTT_TEST_2: ON
       MQTT_TEST_3: OFF
+      MQTT_TEST_4: OFF
+      MQTT_TEST_5: OFF
+      MQTT_TEST_6: OFF
       BUILD_EXAMPLES: OFF       
-    TestGroup3TlsWs:
+    TestGroup3:
       MQTT_NO_TLS: OFF
       MQTT_USE_WS: OFF
       MQTT_USE_STR_CHECK: ON
       MQTT_TEST_1: OFF
       MQTT_TEST_2: OFF
       MQTT_TEST_3: ON
+      MQTT_TEST_4: OFF
+      MQTT_TEST_5: OFF
+      MQTT_TEST_6: OFF
+      BUILD_EXAMPLES: OFF       
+    TestGroup4:
+      MQTT_NO_TLS: ON
+      MQTT_USE_WS: ON
+      MQTT_USE_STR_CHECK: ON
+      MQTT_TEST_1: OFF
+      MQTT_TEST_2: OFF
+      MQTT_TEST_3: OFF
+      MQTT_TEST_4: ON
+      MQTT_TEST_5: OFF
+      MQTT_TEST_6: OFF
+      BUILD_EXAMPLES: OFF       
+    TestGroup5:
+      MQTT_NO_TLS: ON
+      MQTT_USE_WS: ON
+      MQTT_USE_STR_CHECK: ON
+      MQTT_TEST_1: OFF
+      MQTT_TEST_2: OFF
+      MQTT_TEST_3: OFF
+      MQTT_TEST_4: OFF
+      MQTT_TEST_5: ON
+      MQTT_TEST_6: OFF
+      BUILD_EXAMPLES: OFF       
+    TestGroup6:
+      MQTT_NO_TLS: ON
+      MQTT_USE_WS: ON
+      MQTT_USE_STR_CHECK: ON
+      MQTT_TEST_1: OFF
+      MQTT_TEST_2: OFF
+      MQTT_TEST_3: OFF
+      MQTT_TEST_4: OFF
+      MQTT_TEST_5: OFF
+      MQTT_TEST_6: ON
       BUILD_EXAMPLES: OFF       
 
 pool:
