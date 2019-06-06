@@ -93,14 +93,14 @@ jobs:
 
   steps:
     - script: |
-      git submodule update --init --recursive
-      mkdir build
-      cd build
-      cmake -DMQTT_NO_TLS=%MQTT_NO_TLS% -DMQTT_USE_WS=%MQTT_USE_WS% -DMQTT_USE_STR_CHECK=%MQTT_USE_STR_CHECK% -DMQTT_TEST_1=%MQTT_TEST_1% -DMQTT_TEST_2=%MQTT_TEST_2% -DMQTT_TEST_3=%MQTT_TEST_3% -DBUILD_EXAMPLES=%BUILD_EXAMPLES% -DOPENSSL_ROOT_DIR="./openssl/" ..
+        git submodule update --init --recursive
+        mkdir build
+        cd build
+        cmake -DMQTT_NO_TLS=%MQTT_NO_TLS% -DMQTT_USE_WS=%MQTT_USE_WS% -DMQTT_USE_STR_CHECK=%MQTT_USE_STR_CHECK% -DMQTT_TEST_1=%MQTT_TEST_1% -DMQTT_TEST_2=%MQTT_TEST_2% -DMQTT_TEST_3=%MQTT_TEST_3% -DBUILD_EXAMPLES=%BUILD_EXAMPLES% -DOPENSSL_ROOT_DIR="./openssl/" ..
 cmake --build . --config Release
       displayName: 'cmake build'
     - script: |
-      cd test
-      set PATH=%BOOST_ROOT%\lib;PATH=D:/a/1/s/openssl/;%PATH%
-      ctest -VV
+        cd test
+        set PATH=%BOOST_ROOT%\lib;PATH=D:/a/1/s/openssl/;%PATH%
+        ctest -VV
       displayName: 'cmake test
