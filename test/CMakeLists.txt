@@ -13,12 +13,12 @@ OPTION(MQTT_TEST_3 "Build test part3" ON)
 IF (MQTT_TEST_1)
     LIST (APPEND check_PROGRAMS
         connect.cpp
-#        pubsub.cpp
-#        async_pubsub_1.cpp
-#        async_pubsub_2.cpp
-#        pubsub_no_strand.cpp
-#        remaining_length.cpp
-#        multi_sub.cpp
+        pubsub.cpp
+        async_pubsub_1.cpp
+        async_pubsub_2.cpp
+        pubsub_no_strand.cpp
+        remaining_length.cpp
+        multi_sub.cpp
     )
 ENDIF ()
 
