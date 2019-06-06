@@ -106,7 +106,7 @@ steps:
   displayName: 'cmake build'
 
 - script: |
-    cd test
+    cd build\test
     set PATH=%BOOST_ROOT%\lib;PATH=D:/a/1/s/openssl/;%PATH%
     ctest -VV
   displayName: 'cmake test'
