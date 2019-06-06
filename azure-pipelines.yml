@@ -10,7 +10,6 @@ pr:
       
 jobs:
 - job install_openssl
-  displayName: 'install openssl'
   pool:
     vmImage: 'vs2017-win2016'
   steps:
@@ -18,9 +17,9 @@ jobs:
       git clone https://github.com/curl/curl.git -b curl-7_65_0 
       git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
       .\curl\projects\build-openssl.bat vc14.1 x86 debug .\openssl\ -perlpath C:\Strawberry
+  displayName: 'install openssl'
 
 - job build_mqtt_cpp
-  displayName: 'build mqtt_cpp'
   pool:
     vmImage: 'vs2017-win2016'
   strategy:
