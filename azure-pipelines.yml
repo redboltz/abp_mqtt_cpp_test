@@ -83,7 +83,7 @@ steps:
     git clone https://github.com/curl/curl.git -b curl-7_65_0 
     git clone https://github.com/openssl/openssl.git -b OpenSSL_1_1_1b
     .\curl\projects\build-openssl.bat vc14.1 x86 debug .\openssl\ -perlpath C:\Strawberry
-displayName: 'install openssl'
+  displayName: 'install openssl'
 
 - script: |
     git submodule update --init --recursive
