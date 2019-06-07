@@ -60,7 +60,7 @@ IF (MQTT_TEST_6)
     )
 ENDIF ()
 
-IF (MQTT_TEST_3)
+IF (MQTT_TEST_7)
     LIST (APPEND check_PROGRAMS
         sub.cpp
         as_buffer_sub.cpp
