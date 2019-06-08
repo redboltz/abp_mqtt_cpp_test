@@ -2,13 +2,7 @@ sudo: false
 language: cpp
 dist: trusty
 
-cache: # see https://docs.travis-ci.com/user/caching/
-- directories:
-  - $HOME/.cache
-
 install:
- - mkdir -p $HOME/.cache
- - touch $HOME/.cache/mydependency.so - export BASE=`pwd`
  - mkdir ${BASE}/usr
  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then wget --no-check-certificate https://cmake.org/files/v3.8/cmake-3.8.2-Linux-x86_64.sh -O cmake-3.8.2-Linux-x86_64.sh; fi
  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then chmod a+x cmake-3.8.2-Linux-x86_64.sh; fi
