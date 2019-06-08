@@ -112,22 +112,6 @@ IF (NOT MQTT_NO_TLS)
     )
 ENDIF ()
 
-ADD_LIBRARY(coverage_config INTERFACE)
-OPTION(CODE_COVERAGE "Enable coverage reporting" OFF)
-IF (CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    # Add required flags (GCC & LLVM/Clang)
-    TARGET_COMPILE_OPTIONS(coverage_config INTERFACE
-        -O0        # no optimization
-        -g         # generate debug info
-        --coverage # sets all required flags
-    )
-    IF (CMAKE_VERSION VERSION_GREATER_EQUAL 3.13)
-        TARGET_LINK_OPTIONS(coverage_config INTERFACE --coverage)
-    ELSE ()
-        TARGET_LINK_LIBRARIES(coverage_config INTERFACE --coverage)
-    ENDIF ()
-ENDIF ()
-
 ENABLE_TESTING ()
 
 IF (BUILD_TESTS)
