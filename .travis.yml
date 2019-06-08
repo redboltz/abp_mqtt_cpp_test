@@ -61,7 +61,7 @@ matrix:
     - os: linux
       sudo: required
       compiler: clang
-      env: FLAGS="-DCODE_COVERAGE=ON -DMQTT_TEST_1=ON  -DMQTT_TEST_2=ON -DMQTT_TEST_3=ON  -DMQTT_TEST_4=OFF -DMQTT_TEST_5=OFF -DMQTT_TEST_6=OFF -DMQTT_TEST_7=OFF -DMQTT_NO_TLS=OFF  -DBUILD_EXAMPLES=OFF -DMQTT_USE_WS=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_STD_OPTIONAL=ON -DMQTT_STD_VARIANT=ON -DMQTT_STD_STRING_VIEW=ON" CFLAGS="-Werror -g -Wall -Wextra -Wno-ignored-qualifiers -fsanitize=address -fno-omit-frame-pointer" CXXFLAGS="-std=c++14 -Werror -g -Wall -Wextra -Wno-ignored-qualifiers -Wconversion -fsanitize=address -fno-omit-frame-pointer" LDFLAGS="-Wno-ignored-qualifiers -fsanitize=address" MAKEFLAGS="-j1"
+      env: FLAGS="-DCODE_COVERAGE=OFF -DMQTT_TEST_1=ON  -DMQTT_TEST_2=ON -DMQTT_TEST_3=ON  -DMQTT_TEST_4=OFF -DMQTT_TEST_5=OFF -DMQTT_TEST_6=OFF -DMQTT_TEST_7=OFF -DMQTT_NO_TLS=OFF  -DBUILD_EXAMPLES=OFF -DMQTT_USE_WS=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_STD_OPTIONAL=ON -DMQTT_STD_VARIANT=ON -DMQTT_STD_STRING_VIEW=ON" CFLAGS="-Werror -g -Wall -Wextra -Wno-ignored-qualifiers -fsanitize=address -fno-omit-frame-pointer" CXXFLAGS="-std=c++14 -Werror -g -Wall -Wextra -Wno-ignored-qualifiers -Wconversion -fsanitize=address -fno-omit-frame-pointer" LDFLAGS="-Wno-ignored-qualifiers -fsanitize=address" MAKEFLAGS="-j1"
       addons:
         apt:
           sources:
@@ -83,7 +83,7 @@ matrix:
     - os: linux
       sudo: required
       compiler: clang
-      env: FLAGS="-DCODE_COVERAGE=ON -DMQTT_TEST_1=OFF -DMQTT_TEST_2=OFF -DMQTT_TEST_3=OFF -DMQTT_TEST_4=ON  -DMQTT_TEST_5=ON  -DMQTT_TEST_6=ON  -DMQTT_TEST_7=OFF -DMQTT_NO_TLS=OFF  -DBUILD_EXAMPLES=OFF -DMQTT_USE_WS=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_STD_OPTIONAL=ON -DMQTT_STD_VARIANT=ON -DMQTT_STD_STRING_VIEW=ON" CFLAGS="-Werror -g -Wall -Wextra -Wno-ignored-qualifiers -fsanitize=address -fno-omit-frame-pointer" CXXFLAGS="-std=c++14 -Werror -g -Wall -Wextra -Wno-ignored-qualifiers -Wconversion -fsanitize=address -fno-omit-frame-pointer" LDFLAGS="-Wno-ignored-qualifiers -fsanitize=address" MAKEFLAGS="-j1"
+      env: FLAGS="-DCODE_COVERAGE=OFF -DMQTT_TEST_1=OFF -DMQTT_TEST_2=OFF -DMQTT_TEST_3=OFF -DMQTT_TEST_4=ON  -DMQTT_TEST_5=ON  -DMQTT_TEST_6=ON  -DMQTT_TEST_7=OFF -DMQTT_NO_TLS=OFF  -DBUILD_EXAMPLES=OFF -DMQTT_USE_WS=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_STD_OPTIONAL=ON -DMQTT_STD_VARIANT=ON -DMQTT_STD_STRING_VIEW=ON" CFLAGS="-Werror -g -Wall -Wextra -Wno-ignored-qualifiers -fsanitize=address -fno-omit-frame-pointer" CXXFLAGS="-std=c++14 -Werror -g -Wall -Wextra -Wno-ignored-qualifiers -Wconversion -fsanitize=address -fno-omit-frame-pointer" LDFLAGS="-Wno-ignored-qualifiers -fsanitize=address" MAKEFLAGS="-j1"
       addons:
         apt:
           sources:
@@ -105,7 +105,7 @@ matrix:
     - os: linux
       sudo: required
       compiler: clang
-      env: FLAGS="-DCODE_COVERAGE=ON -DMQTT_TEST_1=OFF -DMQTT_TEST_2=OFF -DMQTT_TEST_3=OFF -DMQTT_TEST_4=OFF -DMQTT_TEST_5=OFF -DMQTT_TEST_6=OFF -DMQTT_TEST_7=ON  -DMQTT_NO_TLS=OFF  -DBUILD_EXAMPLES=ON  -DMQTT_USE_WS=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_STD_OPTIONAL=ON -DMQTT_STD_VARIANT=ON -DMQTT_STD_STRING_VIEW=ON" CFLAGS="-Werror -g -Wall -Wextra -Wno-ignored-qualifiers -fsanitize=address -fno-omit-frame-pointer" CXXFLAGS="-std=c++14 -Werror -g -Wall -Wextra -Wno-ignored-qualifiers -Wconversion -fsanitize=address -fno-omit-frame-pointer" LDFLAGS="-Wno-ignored-qualifiers -fsanitize=address" MAKEFLAGS="-j1"
+      env: FLAGS="-DCODE_COVERAGE=OFF -DMQTT_TEST_1=OFF -DMQTT_TEST_2=OFF -DMQTT_TEST_3=OFF -DMQTT_TEST_4=OFF -DMQTT_TEST_5=OFF -DMQTT_TEST_6=OFF -DMQTT_TEST_7=ON  -DMQTT_NO_TLS=OFF  -DBUILD_EXAMPLES=ON  -DMQTT_USE_WS=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_USE_STR_CHECK=ON -DMQTT_STD_OPTIONAL=ON -DMQTT_STD_VARIANT=ON -DMQTT_STD_STRING_VIEW=ON" CFLAGS="-Werror -g -Wall -Wextra -Wno-ignored-qualifiers -fsanitize=address -fno-omit-frame-pointer" CXXFLAGS="-std=c++14 -Werror -g -Wall -Wextra -Wno-ignored-qualifiers -Wconversion -fsanitize=address -fno-omit-frame-pointer" LDFLAGS="-Wno-ignored-qualifiers -fsanitize=address" MAKEFLAGS="-j1"
       addons:
         apt:
           sources:
@@ -178,7 +178,7 @@ matrix:
     - os: linux
       sudo: required
       compiler: gcc
-      env: FLAGS="-DCODE_COVERAGE=ON -DMQTT_TEST_1=OFF -DMQTT_TEST_2=OFF -DMQTT_TEST_3=OFF -DMQTT_TEST_4=OFF -DMQTT_TEST_5=OFF -DMQTT_TEST_6=OFF -DMQTT_TEST_7=ON  -DBUILD_EXAMPLES=ON  -DMQTT_NO_TLS=OFF -DMQTT_USE_WS=OFF -DMQTT_USE_STR_CHECK=OFF" CXXFLAGS="-std=c++14 -Werror -g -Wall -Wextra -Wno-ignored-qualifiers -Wconversion" MAKEFLAGS="-j2"
+      env: FLAGS="-DCODE_COVERAGE=ON -DMQTT_TEST_1=OFF -DMQTT_TEST_2=OFF -DMQTT_TEST_3=OFF -DMQTT_TEST_4=OFF -DMQTT_TEST_5=OFF -DMQTT_TEST_6=ON -DMQTT_TEST_7=ON  -DBUILD_EXAMPLES=ON  -DMQTT_NO_TLS=OFF -DMQTT_USE_WS=OFF -DMQTT_USE_STR_CHECK=OFF" CXXFLAGS="-std=c++14 -Werror -g -Wall -Wextra -Wno-ignored-qualifiers -Wconversion" MAKEFLAGS="-j2"
       addons:
         apt:
           sources:
