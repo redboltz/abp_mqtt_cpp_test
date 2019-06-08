@@ -102,6 +102,8 @@ FOREACH (source_file ${check_PROGRAMS})
         IF (CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
             SET_PROPERTY (TARGET ${source_file_we}
                           APPEND_STRING PROPERTY COMPILE_FLAGS " -O0 -g --coverage")
+            SET_PROPERTY (TARGET ${source_file_we}
+                          APPEND_STRING PROPERTY LINK_FLAGS " --coverage")
         ENDIF ()
     ENDIF ()
 
