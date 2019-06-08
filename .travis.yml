@@ -2,6 +2,7 @@ sudo: false
 language: cpp
 dist: trusty
 
+
 install:
  - export BASE=`pwd`
  - mkdir ${BASE}/usr
