@@ -103,7 +103,6 @@ FOREACH (source_file ${check_PROGRAMS})
             SET_PROPERTY (TARGET ${source_file_we}
                           APPEND_STRING PROPERTY COMPILE_FLAGS "-O0 -g --coverage")
         ENDIF ()
-        TARGET_LINK_OPTIONS(coverage_config INTERFACE --coverage)
     ENDIF ()
 
     IF ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
