@@ -99,7 +99,13 @@ FOREACH (source_file ${check_PROGRAMS})
     IF ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang" OR "${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
         SET_PROPERTY (TARGET ${source_file_we}
                       APPEND_STRING PROPERTY COMPILE_FLAGS "-pthread")
+        IF (CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+            SET_PROPERTY (TARGET ${source_file_we}
+                          APPEND_STRING PROPERTY COMPILE_FLAGS "-O0 -g --coverage")
+        ENDIF ()
+        TARGET_LINK_OPTIONS(coverage_config INTERFACE --coverage)
     ENDIF ()
+
     IF ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
         IF (CMAKE_CXX_FLAGS MATCHES "/W[0-4]")
             STRING(REGEX REPLACE "/W[0-4]" "/W3 /WX" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
