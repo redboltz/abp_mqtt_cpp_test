@@ -10058,7 +10058,10 @@ private:
         as::const_buffer payload,
         async_handler_t func,
         mqtt::any life_keeper) {
-
+        if (dup) {
+            auto tmp = dup;
+            dup = tmp;
+        }
         auto do_async_send_publish =
             [&](auto msg, auto const& serialize_publish) {
                 if (qos == qos::at_least_once || qos == qos::exactly_once) {
