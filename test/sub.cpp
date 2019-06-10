@@ -10,6 +10,11 @@
 
 #include <mqtt/optional.hpp>
 
+inline void unused_func_in_test() {
+    static int i = 0;
+    ++i;
+}
+
 BOOST_AUTO_TEST_SUITE(test_sub)
 
 BOOST_AUTO_TEST_CASE( pub_qos0_sub_string_single ) {
