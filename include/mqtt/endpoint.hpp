@@ -102,6 +102,11 @@ public:
          version_(version)
     {}
 
+    inline void hogehoge() {
+        static int i = 100;
+        --i;
+    }        
+
     // MQTT Common handlers
 
     /**
