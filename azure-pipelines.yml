@@ -136,6 +136,8 @@ jobs:
         MQTT_TEST_5: OFF
         MQTT_TEST_6: OFF
         BUILD_EXAMPLES: OFF
+
+steps:
   - script: |
       git submodule update --init --recursive
       mkdir build
