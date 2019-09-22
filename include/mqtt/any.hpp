@@ -23,6 +23,11 @@ using boost::any;
 
 #endif // !defined(MQTT_STD_ANY)
 
+inline void unused1() {
+    static int i = 0;
+    ++i;
+}
+  
 } // namespace mqtt
 
 #endif // MQTT_ANY_HPP
